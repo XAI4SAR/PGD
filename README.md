@@ -5,15 +5,15 @@ PGD
 This project is for paper "Physics-Guided Detector for SAR Airplanes"
 
 ### 1.1 Features
-![本地路径](runs/fig_pgdet.png)
+![本地路径](data/images/fig_pgdet.png)
 
 The detailed implementation of the proposed physics-guided detector for SAR airplanes.
 
-![本地路径](runs/fig_pgdlite_exp.png)
+![本地路径](data/images/fig_pgdlite_exp.png)
 
 The explanation results based on Grad-CAM for PGD and PGD-Lite models.
 
-![本地路径](runs/fig_IPexp.png)
+![本地路径](data/images/fig_IPexp.png)
 
 
 
