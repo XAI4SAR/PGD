@@ -81,6 +81,10 @@ python train_PGD.py --data data/SAR_PLANE.yaml  --cfg models/hub/resnet18_RepPAN
 python train_PGD_Lite.py --data data/SAR_PLANE.yaml  --cfg models/hub/resnet18_RepPAN.yaml  --hyp data/hyps/hyp_SARPLANE.yaml 
 ```
 
+### 3.6 Pre-training weights
+PGD:download(https://pan.baidu.com/s/13OMggVOiwatqLR4hWIMMvA?pwd=zjs9)
+PGD_Lite:download(https://pan.baidu.com/s/1Hmt5lFrfHbJRfddJWL2dUg?pwd=ithq)
+
 4.Contributions
 ------- 
 Based on the preliminary findings in our previous work, we released this PGD project as a continuous study with the following extensions:
