@@ -1,8 +1,8 @@
-PGD
+Physics-Guided Detector (PGD) for SAR Airplane
 ==== 
 1.Introduction  
 ------- 
-This project is for paper "Physics-Guided Detector for SAR Airplanes"
+Please refer to this work: [Physics-Guided Detector for SAR Airplanes, IEEE TCSVT 2025](https://ieeexplore.ieee.org/abstract/document/11079686)
 
 ### 1.1 Features
 ![本地路径](data/images/fig_pgdet.png)
@@ -24,7 +24,7 @@ The explanation results based on Grad-CAM for PGD and PGD-Lite models.
 
 2.Previously on PGD
 ------- 
-In our precious works, we propose a physics guided learning method for SAR airplane target feature rep resentation, where the airplane scattering characteristics are extracted to guide the model training.
+In our precious works, we propose a physics guided learning method for SAR airplane target feature representation, where the airplane scattering characteristics are extracted to guide the model training.
 
 ```
 @inproceedings{wang2023new,
@@ -85,13 +85,16 @@ python train_PGD_Lite.py --data data/SAR_PLANE.yaml  --cfg models/hub/resnet18_R
 PGD:download(https://pan.baidu.com/s/13OMggVOiwatqLR4hWIMMvA?pwd=zjs9)
 PGD_Lite:download(https://pan.baidu.com/s/1Hmt5lFrfHbJRfddJWL2dUg?pwd=ithq)
 
-4.Contributions
-------- 
-Based on the preliminary findings in our previous work, we released this PGD project as a continuous study with the following extensions:
-* A general physics-guided detector (PGD) learning paradigm is proposed for SAR airplane detection and fine-grained classification, aiming to address the challenges of discreteness and variability. It can be extended to different deep learning-based detectors and applicable for various types of backbone models and detection heads. Several implementations, denoted as PGD and PGD-Lite, are provided to illustrate its flexibility and effectiveness.
-* PGD is consist of physics-guided self-supervised learning (PGSSL), feature enhancement (PGFE) and instance perception (PGIP). PGSSL and PGFE aim to learn from airplane scattering structure distributions and further facilitate more discriminative feature representations. PGIP is designed to concern the refined scattering characteristics of each instance adaptively at the detection head. The discrete and variable scattering information of SAR airplanes are comprehensively investigated.
-* Extensive experiments are conducted on SAR-AIRcraft-1.0 dataset. Based on existing detectors, we construct nine PGD models for evaluation. The results show that the proposed PGD can achieve the state-of-the-art performance on SAR-AIRcraft-1.0 dataset (90.7\% mAP) compared with other methods, and improve the existing detectors by 3.1\% mAP most. The effectiveness also proves the model-agnostic ability of PGD learning paradigm, showing significant potentials of its utility.
-
-5.Citation
+4.Citation
 ------- 
 If you find this repository useful for your publications, please consider citing our paper.
+
+```
+@article{huang2025physics,
+  title={Physics-Guided Detector for SAR Airplanes},
+  author={Huang, Zhongling and Liu, Long and Yang, Shuxin and Wang, Zhirui and Cheng, Gong and Han, Junwei},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2025},
+  publisher={IEEE}
+}
+```
