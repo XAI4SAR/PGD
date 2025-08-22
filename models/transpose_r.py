@@ -280,11 +280,11 @@ class TransPoseR(nn.Module):
         )
 
         self.avgpool1 = nn.AvgPool2d(2, stride=2)
-        self.adj_conv1 = nn.Conv2d(d_model, 32 * 4, kernel_size=3, stride=1, padding=1)
+        self.adj_conv1 = nn.Conv2d(d_model, 32 * 2, kernel_size=3, stride=1, padding=1)
         self.avgpool2 = nn.AvgPool2d(4, stride=4)
-        self.adj_conv2 = nn.Conv2d(d_model, 32 * 8, kernel_size=3, stride=1, padding=1)
+        self.adj_conv2 = nn.Conv2d(d_model, 32 * 4, kernel_size=3, stride=1, padding=1)
         self.avgpool3 = nn.AvgPool2d(8, stride=8)
-        self.adj_conv3 = nn.Conv2d(d_model, 32 * 16, kernel_size=3, stride=1, padding=1)
+        self.adj_conv3 = nn.Conv2d(d_model, 32 * 8, kernel_size=3, stride=1, padding=1)
 
     def _make_position_embedding(self, w, h, d_model, pe_type='sine'):
         assert pe_type in ['none', 'learnable', 'sine']
