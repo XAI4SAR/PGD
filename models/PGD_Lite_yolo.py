@@ -186,13 +186,13 @@ class Model(nn.Module):
             if profile:
                 self._profile_one_layer(m, x, dt)
             x=m(x)
-            if m.i == 17: 
+            if m.i == 11: 
                 x = self.ICAF1([x,keypoint_feature[0]])
                 fuse_times += 1               
-            if m.i == 20:                             
+            if m.i == 14:                             
                 x = self.ICAF2([x,keypoint_feature[1]])
                 fuse_times += 1                     
-            if m.i == 23:                                   
+            if m.i == 17:                                   
                 x = self.ICAF3([x,keypoint_feature[2]])
                 fuse_times += 1                       
             y.append(x if m.i in self.save else None)  # save output
