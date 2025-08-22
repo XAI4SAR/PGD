@@ -125,11 +125,11 @@ class Model(nn.Module):
         self.Transposemodel = TransPoseR(block_class,layers)
         self.Transposemodel.to(device)
 
-        self.ICAF1=TransformerFusionBlock(d_model=128,vert_anchors=16, horz_anchors=16)
+        self.ICAF1=TransformerFusionBlock(d_model=64,vert_anchors=16, horz_anchors=16)
         self.ICAF1.to(device)
-        self.ICAF2=TransformerFusionBlock(d_model=256,vert_anchors=16, horz_anchors=16)
+        self.ICAF2=TransformerFusionBlock(d_model=128,vert_anchors=16, horz_anchors=16)
         self.ICAF2.to(device)
-        self.ICAF3=TransformerFusionBlock(d_model=512,vert_anchors=16, horz_anchors=16)
+        self.ICAF3=TransformerFusionBlock(d_model=256,vert_anchors=16, horz_anchors=16)
         self.ICAF3.to(device)
         if device == None:
             raise Exception('device parameter does not exist')
