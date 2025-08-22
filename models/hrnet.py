@@ -227,11 +227,11 @@ class HighResolutionNet(nn.Module):
             StageModule(input_branches=4, output_branches=1, c=base_channel)
         )
         self.avgpool1 = nn.AvgPool2d(2, stride=2)
-        self.adj_conv1 = nn.Conv2d(base_channel, base_channel * 4, kernel_size=3, stride=1, padding=1)
+        self.adj_conv1 = nn.Conv2d(base_channel, base_channel * 2, kernel_size=3, stride=1, padding=1)
         self.avgpool2 = nn.AvgPool2d(4, stride=4)
-        self.adj_conv2 = nn.Conv2d(base_channel, base_channel * 8, kernel_size=3, stride=1, padding=1)
+        self.adj_conv2 = nn.Conv2d(base_channel, base_channel * 4, kernel_size=3, stride=1, padding=1)
         self.avgpool3 = nn.AvgPool2d(8, stride=8)
-        self.adj_conv3 = nn.Conv2d(base_channel, base_channel * 16, kernel_size=3, stride=1, padding=1)
+        self.adj_conv3 = nn.Conv2d(base_channel, base_channel * 8, kernel_size=3, stride=1, padding=1)
         
 
     def forward(self, x):
