@@ -85,6 +85,14 @@ python train_PGD_Lite.py --data data/SAR_PLANE.yaml  --cfg models/hub/resnet18_R
 PGD:download(https://pan.baidu.com/s/13OMggVOiwatqLR4hWIMMvA?pwd=zjs9)
 PGD_Lite:download(https://pan.baidu.com/s/1Hmt5lFrfHbJRfddJWL2dUg?pwd=ithq)
 
+### 3.7 Result
+-------
+Quantitative results on the SAR-AIRcraft-1.0 test set.
+| Model       | mAP@50 |
+| ----------- | ------ |
+| PGD-YOLOv5  | 76.9%  |
+
+
 4.Citation
 ------- 
 If you find this repository useful for your publications, please consider citing our paper.
